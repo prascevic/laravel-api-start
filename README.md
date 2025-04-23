@@ -36,7 +36,9 @@ EndPoint are following this.
         Will get all tasks and return json.
 
 - POST /api/tasks 
-        will save the task 
+
+        Will save the task 
+        
         ```
         {
             "title": "sample title",
