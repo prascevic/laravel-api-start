@@ -39,7 +39,6 @@ EndPoint are following this.
 
     Will save the task 
 
-        ```
         {
             "title": "sample title",
             "description": "sample description",
@@ -47,14 +46,16 @@ EndPoint are following this.
             "assigneeId": 0
         }
 
-        ```
-        In here status and assigneeId are optional
+    In here status and assigneeId are optional
 
-- GET /api/posts/{id} – show
-        will get special task has right id
+- GET /api/posts/{id}
+
+    will get special task has right id
+
 - PUT/PATCH /api/posts/{id} – update
-        will update special task has right id
-        ```
+
+    will update special task has right id
+
         {
             "title": "updated title",
             "description": "updated description",
@@ -62,17 +63,15 @@ EndPoint are following this.
             "assigneeId": 0
         }
 
-        ```
         all datas are optional
         If we need to assign task to specific user, we can send the data like this
 
-        ```
         {
             "assigneeId": 0
         }
-         
-        ```
+
         in here 0 means users id
         
-- DELETE /api/posts/{id} – destroy
-        will delete special task has right id
+- DELETE /api/posts/{id} 
+
+    will delete special task has right id
