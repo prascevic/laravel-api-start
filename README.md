@@ -33,12 +33,12 @@ EndPoint are following this.
 
 - GET /api/tasks 
 
-        Will get all tasks and return json.
+    Will get all tasks and return json.
 
 - POST /api/tasks 
 
-        Will save the task 
-        
+    Will save the task 
+
         ```
         {
             "title": "sample title",
