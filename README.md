@@ -16,7 +16,7 @@ It's simple.
 
 ```
 git clone 
-cd [task-tracker]
+cd task-tracker
 composer install
 php artisan migrate
 php artisan serve
@@ -31,14 +31,46 @@ After install, "task_tracker" database will be created and admin, developer user
 
 EndPoint are following this.
 
-- GET /api/tasks – get all 
+- GET /api/tasks 
 
-Will get all tasks and return json.
+        Will get all tasks and return json.
 
-- POST /api/posts – store
+- POST /api/tasks 
+        will save the task 
+        ```
+        {
+            "title": "sample title",
+            "description": "sample description",
+            "status": "todo",
+            "assigneeId": 0
+        }
+
+        ```
+        In here status and assigneeId are optional
 
 - GET /api/posts/{id} – show
-
+        will get special task has right id
 - PUT/PATCH /api/posts/{id} – update
+        will update special task has right id
+        ```
+        {
+            "title": "updated title",
+            "description": "updated description",
+            "status": "todo",
+            "assigneeId": 0
+        }
 
+        ```
+        all datas are optional
+        If we need to assign task to specific user, we can send the data like this
+
+        ```
+        {
+            "assigneeId": 0
+        }
+         
+        ```
+        in here 0 means users id
+        
 - DELETE /api/posts/{id} – destroy
+        will delete special task has right id
