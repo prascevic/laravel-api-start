@@ -5,6 +5,11 @@
 
 This project is about simple Rest API for test.
 
+## Requirement
+
+Xampp lastest version
+Composer latest version
+
 ## How to install
 
 It's simple.
@@ -13,36 +18,27 @@ It's simple.
 git clone 
 cd [task-tracker]
 composer install
+php artisan migrate
+php artisan serve
 
 ```
+Then server will be created http://localhost:8000
 
-## Laravel Sponsors
+I used Mysql.
+After install, "task_tracker" database will be created and admin, developer users will be created automatically.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Explain how to use this API.
 
-### Premium Partners
+EndPoint are following this.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
+- GET /api/tasks – get all 
 
-## Contributing
+Will get all tasks and return json.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- POST /api/posts – store
 
-## Code of Conduct
+- GET /api/posts/{id} – show
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- PUT/PATCH /api/posts/{id} – update
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- DELETE /api/posts/{id} – destroy
